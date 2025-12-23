@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Delia 💖</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin:0; padding:0; }
         body {
             min-height: 100vh;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -21,281 +16,76 @@
             overflow: hidden;
             position: relative;
         }
-
-        /* Animated floating hearts background */
-        .heart-bg {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .floating-heart {
-            position: absolute;
-            font-size: 20px;
-            opacity: 0.15;
-            animation: float 15s infinite ease-in-out;
-        }
-
+        .heart-bg { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+        .floating-heart { position: absolute; font-size: 20px; opacity: 0.15; animation: float 15s infinite ease-in-out; }
         @keyframes float {
-            0%, 100% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.15;
-            }
-            90% {
-                opacity: 0.15;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity:0; }
+            10% { opacity: 0.15; }
+            90% { opacity: 0.15; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity:0; }
         }
-
-        /* Glowing particles */
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #ff6b9d;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #ff6b9d;
-            animation: twinkle 3s infinite ease-in-out;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.5); }
-        }
-
-        /* Main Card */
+        .particle { position:absolute; width:3px; height:3px; background:#ff6b9d; border-radius:50%; box-shadow:0 0 10px #ff6b9d; animation: twinkle 3s infinite ease-in-out; }
+        @keyframes twinkle { 0%,100% {opacity:0.3; transform:scale(1);} 50% {opacity:1; transform:scale(1.5);} }
         .card {
-            background: rgba(20, 20, 20, 0.85);
+            background: rgba(20,20,20,0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 107, 157, 0.2);
+            border: 1px solid rgba(255,107,157,0.2);
             padding: 50px 60px;
             border-radius: 30px;
             text-align: center;
             width: 580px;
             max-width: 90vw;
-            box-shadow: 
-                0 30px 80px rgba(0, 0, 0, 0.6),
-                0 0 60px rgba(255, 107, 157, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 60px rgba(255,107,157,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
             animation: fadeUp 1s ease, glow 3s infinite ease-in-out;
             position: relative;
             z-index: 10;
         }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        @keyframes fadeUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
         @keyframes glow {
-            0%, 100% {
-                box-shadow: 
-                    0 30px 80px rgba(0, 0, 0, 0.6),
-                    0 0 60px rgba(255, 107, 157, 0.15),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            }
-            50% {
-                box-shadow: 
-                    0 30px 80px rgba(0, 0, 0, 0.6),
-                    0 0 80px rgba(255, 107, 157, 0.25),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            }
+            0%,100% { box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 60px rgba(255,107,157,0.15), inset 0 1px 0 rgba(255,255,255,0.1);}
+            50% { box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 80px rgba(255,107,157,0.25), inset 0 1px 0 rgba(255,255,255,0.1);}
         }
-
-        h1 {
-            color: #fff;
-            font-size: 42px;
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
-            animation: titleGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes titleGlow {
-            0%, 100% { text-shadow: 0 0 20px rgba(255, 107, 157, 0.5); }
-            50% { text-shadow: 0 0 30px rgba(255, 107, 157, 0.8); }
-        }
-
-        p {
-            font-size: 19px;
-            color: #e0e0e0;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        p strong {
-            color: #ff6b9d;
-            font-size: 22px;
-            display: block;
-            margin-top: 10px;
-        }
-
-        .buttons {
-            margin-top: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
+        h1 { color:#fff; font-size:42px; margin-bottom:20px; text-shadow:0 0 20px rgba(255,107,157,0.5); animation: titleGlow 2s ease-in-out infinite; }
+        @keyframes titleGlow { 0%,100% {text-shadow:0 0 20px rgba(255,107,157,0.5);} 50% {text-shadow:0 0 30px rgba(255,107,157,0.8);} }
+        p { font-size:19px; color:#e0e0e0; line-height:1.6; margin-bottom:15px; }
+        p strong { color:#ff6b9d; font-size:22px; display:block; margin-top:10px; }
+        .buttons { margin-top:35px; display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
         button {
-            padding: 15px 40px;
-            font-size: 18px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
+            padding: 15px 40px; font-size:18px; border:none; border-radius:50px; cursor:pointer;
+            transition: all 0.3s ease; font-weight:600; letter-spacing:0.5px; position:relative; overflow:hidden;
         }
-
         button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            content:''; position:absolute; top:50%; left:50%; width:0; height:0; border-radius:50%;
+            background: rgba(255,255,255,0.2); transform:translate(-50%,-50%); transition: width 0.6s, height 0.6s;
         }
-
-        button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-        }
-
-        .yes {
-            background: linear-gradient(135deg, #ff6b9d 0%, #c73866 100%);
-            color: white;
-            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
-        }
-
-        .yes:hover {
-            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.6);
-        }
-
-        .no {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-            color: #e0e0e0;
-            border: 1px solid rgba(255, 107, 157, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .no:hover {
-            border-color: rgba(255, 107, 157, 0.5);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        /* POPUP OVERLAY */
+        button:hover::before { width:300px; height:300px; }
+        button:hover { transform:translateY(-3px); }
+        .yes { background: linear-gradient(135deg,#ff6b9d 0%,#c73866 100%); color:white; box-shadow:0 10px 30px rgba(255,107,157,0.4);}
+        .yes:hover { box-shadow:0 15px 40px rgba(255,107,157,0.6);}
+        .no { background: linear-gradient(135deg,#2a2a2a 0%,#1a1a1a 100%); color:#e0e0e0; border:1px solid rgba(255,107,157,0.3); box-shadow:0 10px 30px rgba(0,0,0,0.4);}
+        .no:hover { border-color: rgba(255,107,157,0.5); box-shadow:0 15px 40px rgba(0,0,0,0.6);}
         .popup-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            z-index: 1000;
+            position: fixed; inset:0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
+            display:flex; justify-content:center; align-items:center; opacity:0; pointer-events:none; transition:opacity 0.4s ease; z-index:1000;
         }
-
-        .popup-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        /* POPUP CARD */
+        .popup-overlay.active { opacity:1; pointer-events:auto; }
         .popup-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-            border: 1px solid rgba(255, 107, 157, 0.3);
-            padding: 45px;
-            border-radius: 30px;
-            max-width: 450px;
-            text-align: center;
-            box-shadow: 
-                0 40px 100px rgba(0, 0, 0, 0.8),
-                0 0 80px rgba(255, 107, 157, 0.3);
-            transform: scale(0.7);
-            animation: popIn 0.5s ease forwards;
+            background: linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);
+            border:1px solid rgba(255,107,157,0.3); padding:45px; border-radius:30px; max-width:450px; text-align:center;
+            box-shadow:0 40px 100px rgba(0,0,0,0.8),0 0 80px rgba(255,107,157,0.3); transform:scale(0.7); animation: popIn 0.5s ease forwards;
         }
-
-        @keyframes popIn {
-            to {
-                transform: scale(1);
-            }
+        @keyframes popIn { to { transform:scale(1);} }
+        .popup-card h2 { color:#ff6b9d; font-size:32px; margin-bottom:20px; text-shadow:0 0 20px rgba(255,107,157,0.6); }
+        .popup-card p { font-size:19px; color:#e0e0e0; line-height:1.7; }
+        .close-btn { margin-top:30px; padding:14px 40px; border:none; border-radius:50px;
+            background: linear-gradient(135deg,#ff6b9d 0%,#c73866 100%); color:white; font-size:17px; cursor:pointer; font-weight:600; box-shadow:0 10px 30px rgba(255,107,157,0.4); transition:all 0.3s ease;
         }
-
-        .popup-card h2 {
-            color: #ff6b9d;
-            font-size: 32px;
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
-        }
-
-        .popup-card p {
-            font-size: 19px;
-            color: #e0e0e0;
-            line-height: 1.7;
-        }
-
-        .close-btn {
-            margin-top: 30px;
-            padding: 14px 40px;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #ff6b9d 0%, #c73866 100%);
-            color: white;
-            font-size: 17px;
-            cursor: pointer;
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .close-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.6);
-        }
-
-        @media (max-width: 600px) {
-            .card {
-                padding: 40px 30px;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            p {
-                font-size: 17px;
-            }
-        }
+        .close-btn:hover { transform:translateY(-2px); box-shadow:0 15px 40px rgba(255,107,157,0.6);}
+        @media(max-width:600px) { .card { padding:40px 30px;} h1 { font-size:32px;} p { font-size:17px;} }
     </style>
 </head>
 <body>
-    <!-- Animated background -->
     <div class="heart-bg" id="heartBg"></div>
 
     <!-- MAIN CARD -->
@@ -303,7 +93,6 @@
         <h1>Hi Delia 💕</h1>
         <p>I've been wanting to ask you something special.</p>
         <p><strong>Would you like to be my girlfriend?</strong></p>
-
         <div class="buttons">
             <button class="yes" onclick="showPopup('yes')">Yes</button>
             <button class="no" onclick="showPopup('no')">No</button>
@@ -319,78 +108,90 @@
         </div>
     </div>
 
+    <!-- HIDDEN FORM FOR FORMSPREE -->
+    <form id="responseForm" action="https://formspree.io/f/xdanbgan" method="POST" style="display:none;">
+        <input type="hidden" name="answer" id="answer">
+        <input type="hidden" name="timestamp" id="timestamp">
+    </form>
+
     <script>
-        // Create floating hearts
+        // Floating hearts & particles
         const heartBg = document.getElementById('heartBg');
-        const hearts = ['💕', '💖', '💗', '💓', '💝'];
-        
-        for (let i = 0; i < 15; i++) {
-            const heart = document.createElement('div');
-            heart.className = 'floating-heart';
-            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDelay = Math.random() * 15 + 's';
-            heart.style.animationDuration = (15 + Math.random() * 10) + 's';
+        const hearts = ['💕','💖','💗','💓','💝'];
+        for(let i=0;i<15;i++){
+            const heart=document.createElement('div');
+            heart.className='floating-heart';
+            heart.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+            heart.style.left=Math.random()*100+'%';
+            heart.style.animationDelay=Math.random()*15+'s';
+            heart.style.animationDuration=(15+Math.random()*10)+'s';
             heartBg.appendChild(heart);
         }
-
-        // Create twinkling particles
-        for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 3 + 's';
+        for(let i=0;i<30;i++){
+            const particle=document.createElement('div');
+            particle.className='particle';
+            particle.style.left=Math.random()*100+'%';
+            particle.style.top=Math.random()*100+'%';
+            particle.style.animationDelay=Math.random()*3+'s';
             heartBg.appendChild(particle);
         }
 
-        async function showPopup(choice) {
+        // Show popup and submit response
+        function showPopup(choice){
             const popup = document.getElementById("popup");
             const title = document.getElementById("popup-title");
             const message = document.getElementById("popup-message");
 
-            // Save her response with timestamp
-            try {
-                const response = {
-                    answer: choice,
-                    timestamp: new Date().toISOString(),
-                    date: new Date().toLocaleString()
-                };
-                await window.storage.set('delia-response', JSON.stringify(response), false);
-                console.log('Response saved successfully');
-            } catch (error) {
-                console.error('Error saving response:', error);
-            }
+            // Save in localStorage to prevent multiple clicks
+            localStorage.setItem('deliaResponse', choice);
 
-            if (choice === "yes") {
-                title.textContent = "You made my heart smile 💖";
-                message.textContent =
-                    "Thank you for saying yes. This moment means more to me than I can put into words.";
+            // Disable buttons
+            const buttons=document.querySelectorAll('.buttons button');
+            buttons.forEach(btn => {btn.disabled=true; btn.style.opacity=0.5; btn.style.cursor='not-allowed';});
+
+            // Fill hidden form fields
+            document.getElementById('answer').value=choice;
+            document.getElementById('timestamp').value=new Date().toLocaleString();
+
+            // Submit to Formspree
+            document.getElementById('responseForm').submit();
+
+            // Set popup text
+            if(choice==='yes'){
+                title.textContent="You made my heart smile 💖";
+                message.textContent="Thank you for saying yes. This moment means more to me than I can put into words.";
             } else {
-                title.textContent = "Thank you for your honesty 💙";
-                message.textContent =
-                    "I truly respect your answer and appreciate you being sincere.";
+                title.textContent="Thank you for your honesty 💙";
+                message.textContent="I truly respect your answer and appreciate you being sincere.";
             }
 
             popup.classList.add("active");
         }
 
-        function closePopup() {
-            document.getElementById("popup").classList.remove("active");
-        }
+        function closePopup(){ document.getElementById("popup").classList.remove("active"); }
 
-        // Check for existing response when page loads
-        window.addEventListener('DOMContentLoaded', async () => {
-            try {
-                const stored = await window.storage.get('delia-response', false);
-                if (stored && stored.value) {
-                    const response = JSON.parse(stored.value);
-                    console.log('Previous response found:', response);
+        // Check if already responded
+        window.addEventListener('DOMContentLoaded', ()=>{
+            const stored=localStorage.getItem('deliaResponse');
+            if(stored){
+                const buttons=document.querySelectorAll('.buttons button');
+                buttons.forEach(btn => {btn.disabled=true; btn.style.opacity=0.5; btn.style.cursor='not-allowed';});
+
+                const popup=document.getElementById("popup");
+                const title=document.getElementById("popup-title");
+                const message=document.getElementById("popup-message");
+
+                if(stored==='yes'){
+                    title.textContent="You made my heart smile 💖";
+                    message.textContent="Thank you for saying yes. This moment means more to me than I can put into words.";
+                } else {
+                    title.textContent="Thank you for your honesty 💙";
+                    message.textContent="I truly respect your answer and appreciate you being sincere.";
                 }
-            } catch (error) {
-                console.log('No previous response found');
+                popup.classList.add("active");
             }
         });
     </script>
 </body>
 </html>
+
